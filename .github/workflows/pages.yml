@@ -1,4 +1,4 @@
-name: Build personal website
+name: Build Academic Pages website
 on:
   pull_request:
   push:
@@ -11,11 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Build original Academic Pages template
+        uses: actions/jekyll-build-pages@v1
         with:
-          python-version: '3.x'
-      - name: Build public files
-        run: python scripts/build_static.py
+          source: ./
+          destination: ./_site
+      - name: Check public output
+        run: |
+          test -f _site/index.html
+          test -f _site/assets/css/main.css
+          test -f _site/publications/index.html
+          test -z "$(find _site -iname '*.pdf' -o -iname '*.docx')"
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:

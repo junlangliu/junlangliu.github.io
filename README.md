@@ -1,45 +1,32 @@
 # Junlang Liu's personal website
 
-A responsive academic website covering protein dynamics, statistical inference, AI for science, publications, education, and the scientific community.
+This website uses the repository's original Academic Pages / Minimal Mistakes template. The original layouts, styles, sidebar, and responsive navigation are retained.
 
-## Edit the site
+## Content
 
-- `index.html`: biography, research, publications, background, and contact information.
-- `assets/css/profile.css`: typography, colors, desktop/mobile layout, and print styles.
-- `assets/js/profile.js`: publication filters. All content remains readable without JavaScript.
-- `images/avatar.png`: existing portrait.
+- `_pages/about.md`: biography and research interests.
+- `_pages/research.md`: research directions.
+- `_data/publications.json`: selected public journal articles and preprints.
+- `_pages/publications.html`: publication list in the original archive layout.
+- `_pages/talks.html`: presentations.
+- `_pages/teaching.html`: teaching and mentorship.
+- `_pages/cv.md`: background, education, honors, and service; this is an extracted profile, not a downloadable CV.
+- `_config.yml`: sidebar, contact details, social profiles, and build exclusions.
+- `_data/navigation.yml`: navigation.
 
-No framework, package installation, remote fonts, tracking scripts, or build dependencies are required.
+## Build and hosting
 
-## Build and preview
+The pull request workflow builds the original Jekyll template with `actions/jekyll-build-pages` and saves a GitHub Pages artifact. Only master builds are eligible for deployment. GitHub Pages should use GitHub Actions as its source when the site is ready to publish.
+
+For local development with Ruby and Bundler installed:
 
 ```sh
-python3 scripts/build_static.py
-python3 -m http.server 8765 --bind 127.0.0.1 --directory _site
+bundle install
+bundle exec jekyll serve
 ```
 
-Open `http://127.0.0.1:8765`.
+The supplied CV PDF and other private source documents are not included in this repository or the built website. Sample template content, `files/`, and PDF/DOCX files are excluded from the public build. Publications with Guosong Hong or Gengfeng Zheng are omitted from the selected research publications. Current appointment details remain to be supplied.
 
-The build copies only the explicit public-file list in `scripts/build_static.py`. The original Academic Pages template is preserved in the repository but excluded from the public build. No source CV, street address, telephone number, reference list, or unpublished manuscript list is distributed.
+## Theme
 
-## Hosting
-
-The GitHub Actions workflow builds pull requests without deploying them. A merge into `master` or a manual workflow run on `master` builds and deploys the public file list. For the first deployment, GitHub Pages must be configured to use **GitHub Actions** in the repository's Pages settings. This change does not itself change the Pages settings.
-
-The minimal `_config.yml` also supports a conventional Jekyll branch build by excluding template/demo content. The recommended workflow is the explicit static build above.
-
-## Content sources
-
-- [Google Scholar](https://scholar.google.com/citations?user=sNlg69oAAAAJ&hl=en)
-- [LinkedIn public profile](https://www.linkedin.com/in/junlang-liu-485832231)
-- [Harvard lab profile](https://shakhnovich.faculty.chemistry.harvard.edu/people/junlang-liu)
-- Journal and preprint links alongside each publication
-- Education, teaching, honors, mentorship, and service supplied directly by Junlang
-
-Publication metadata checked in October 2026. Public preprint titles take precedence over working manuscript titles. The published CoQ paper replaces its earlier preprint. Papers coauthored with Guosong Hong or Gengfeng Zheng are omitted from the selected research/publications section as requested. No citation totals are used for this curated selection.
-
-Current appointment and affiliation should be added when supplied. Harvard is identified as doctoral training, not a current appointment.
-
-## Template attribution
-
-The repository originally used [Academic Pages](https://github.com/academicpages/academicpages.github.io), derived from Michael Rose's Minimal Mistakes theme. Original source files and the MIT license are retained.
+[Academic Pages](https://github.com/academicpages/academicpages.github.io), based on [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes).

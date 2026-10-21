@@ -5,32 +5,24 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<p>Selected work on protein biophysics, cellular organization, and AI for science. A complete list is available on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.</p>
+<p>† Equal contribution.</p>
 
-{% include base_path %}
-
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+{% assign groups = "journal,preprint" | split: "," %}
+{% for group in groups %}
+  <h2>{% if group == "journal" %}Journal articles and reviews{% else %}Preprints{% endif %}</h2>
+  <hr />
+  {% for paper in site.data.publications %}
+    {% if paper.kind == group %}
+    <div class="list__item" id="{{ paper.id }}">
+      <article class="archive__item">
+        <h3 class="archive__item-title"><a href="{{ paper.url }}">{{ paper.title }}</a></h3>
+        <p>{{ paper.authors }}</p>
+        <p><em>{{ paper.venue }}</em>{% unless paper.venue contains "2026" %}, {{ paper.year }}{% endunless %}.</p>
+        <p class="archive__item-excerpt">{{ paper.summary }}</p>
+        <p><a href="{{ paper.url }}">{% if group == "preprint" %}Read preprint{% else %}Read article{% endif %}</a>{% if paper.code %} · <a href="{{ paper.code }}">Code</a>{% endif %}</p>
+      </article>
+    </div>
+    {% endif %}
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+{% endfor %}
