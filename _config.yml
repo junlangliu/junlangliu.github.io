@@ -3,15 +3,15 @@
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
+# `jekyll serve -l -H localhost`. If you change this file, please restart the
 # server process.
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Junlang Liu / Personal Website"
+title                    : "Junlang Liu"
 title_separator          : "-"
 name                     : &name "Junlang Liu"
-description              : &description "Junlang Liu's Personal Website"
+description              : &description "Protein dynamics, statistical inference, and AI for science"
 url                      : https://junlangliu.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "junlangliu/junlangliu.github.io"
@@ -21,20 +21,20 @@ repository               : "junlangliu/junlangliu.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/avatar.png"
+  avatar           : "avatar.png"
   name             : "Junlang Liu"
-  pronouns         : "he/him" # example: "she/her"  
+  pronouns         : "he/him" # example: "she/her"
   bio              : "Theoretical and Experimental Biophysicist"
-  location         : "Cambridge, MA"
-  employer         : "Harvard University"
+  location         :
+  employer         :
   uri              : # URL
-  email            : "junlangliu@fas.harvard.edu" 
+  email            : "liu.chvnlang@outlook.com"
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
   googlescholar    : "https://scholar.google.com/citations?user=sNlg69oAAAAJ&hl=en"
   impactstory      : # URL
-  orcid            : # "http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/0009-0000-4106-2011"
   semantic         : # URL
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
@@ -43,9 +43,9 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : # "academicpages"
-  kaggle           : # Username  
-  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+  github           : "junlangliu"
+  kaggle           : # Username
+  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")
 
   # Social media
   bluesky          : # Replace this with you Bluesky username
@@ -57,7 +57,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "junlang-liu-485832231"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -78,7 +78,7 @@ publication_category:
   books:
     title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'
   conferences:
     title: 'Conference Papers'
 
@@ -116,7 +116,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true     # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
 
@@ -154,7 +154,6 @@ analytics:
 include:
   - .htaccess
   - _pages
-  - files
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -182,6 +181,35 @@ exclude:
   - README
   - tmp
   - vendor
+  - "docs"
+  - "scripts"
+  - "files"
+  - "*.pdf"
+  - "*.docx"
+  - "_posts"
+  - "_portfolio"
+  - "_publications"
+  - "_teaching"
+  - "_talks"
+  - "markdown_generator"
+  - "talkmap"
+  - "talkmap.py"
+  - "talkmap.ipynb"
+  - "CONTRIBUTING.md"
+  - "README.md"
+  - "LICENSE"
+  - "package-lock.json"
+  - "_pages/markdown.md"
+  - "_pages/page-archive.html"
+  - "_pages/talkmap.html"
+  - "_pages/year-archive.html"
+  - "_pages/tag-archive.html"
+  - "_pages/category-archive.html"
+  - "_pages/terms.md"
+  - "_pages/non-menu-page.md"
+  - "_pages/archive-layout-with-content.md"
+  - "_pages/collection-archive.html"
+  - "_pages/portfolio.html"
 keep_files:
   - .git
   - .svn
@@ -298,6 +326,7 @@ timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 # Plugins
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap
@@ -306,6 +335,7 @@ plugins:
 # Mimic GitHub Pages with --safe
 whitelist:
   - jekyll-feed
+  - jekyll-redirect-from
   - jekyll-gist
   - jekyll-paginate
   - jekyll-sitemap

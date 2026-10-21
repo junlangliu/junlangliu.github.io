@@ -1,0 +1,79 @@
+[
+  {
+    "id": "pub-linker",
+    "title": "Linker stretching optimizes bonding entropy in sticker-spacer condensates",
+    "year": 2026,
+    "kind": "preprint",
+    "venue": "bioRxiv · October 2026",
+    "authors": "Sk Ashif Akram, <strong>Junlang Liu</strong>, Aniruddha Chattaraj, Sanjeev Gautam, Buddhapriya Chakrabarti, Eugene I. Shakhnovich &amp; Jeremy D. Schmit",
+    "summary": "Connecting polymer conformations and binding entropy to explain the physics of biomolecular condensates.",
+    "url": "https://doi.org/10.64898/2026.10.09.758027",
+    "code": null
+  },
+  {
+    "id": "pub-coq",
+    "title": "Complete enzyme clustering enhances coenzyme Q biosynthesis via substrate channeling",
+    "year": 2026,
+    "kind": "journal",
+    "venue": "Nature Communications 17, 8116",
+    "authors": "Dianzhuo Wang†, Andrea Gottinger†, Jio Jeong†, Callum R. Nicoll†, <strong>Junlang Liu</strong>, Tereza Kadavá, Domiziana Cecchini, Marco Malatesta, Albert J. R. Heck, Andrea Mattevi &amp; Eugene I. Shakhnovich",
+    "summary": "Experiments and molecular simulations reveal how complete enzyme assemblies support substrate channeling and efficient CoQ synthesis.",
+    "url": "https://doi.org/10.1038/s41467-026-74806-2",
+    "code": null
+  },
+  {
+    "id": "pub-chaperonin",
+    "title": "Chaperonin recognition of protein dynamics drives drug resistance",
+    "year": 2026,
+    "kind": "preprint",
+    "venue": "bioRxiv · June 2026",
+    "authors": "<strong>Junlang Liu</strong>, Zhihui Qi, João V. Rodrigues, Zhouyu Zhang, Qianxiang Xu, Abhinav Dubey, Harrison K. Wang, Dongtao Cui, Zeyang Li, Fatima Aly, Doeke R. Hekstra &amp; Eugene I. Shakhnovich",
+    "summary": "Protein dynamics open a window for GroEL/S engagement, linking chaperone activity to inhibitor release and antibiotic resistance.",
+    "url": "https://doi.org/10.64898/2026.06.03.729952",
+    "code": "https://github.com/junlangliu/GroEL_DHFR"
+  },
+  {
+    "id": "pub-vibe",
+    "title": "VibeProteinBench: An Evaluation Benchmark for Language-interfaced Vibe Protein Design",
+    "year": 2026,
+    "kind": "preprint",
+    "venue": "arXiv:2605.10978",
+    "authors": "Hyunjin Seo, Hongjoon Ahn, Jimin Park, Sungjun Han, Gyubok Lee, Soojung Yang, Cheng-Hao Liu, Joseph S. Brown, Leo Chen, Gina El Nesr, Feyisayo Eweje, Sarah Gurev, Hyejin Lee, <strong>Junlang Liu</strong>, Zhihui Qi, Gyu Rie Lee, Sungsoo Ahn, Jamin Shin &amp; Sangwon Jung",
+    "summary": "A benchmark for evaluating language-based models across protein recognition, engineering, and generation.",
+    "url": "https://arxiv.org/abs/2605.10978",
+    "code": null
+  },
+  {
+    "id": "pub-entropy",
+    "title": "Entropy-driven denaturation enables sustainable protein regeneration through rapid gel-solid transition",
+    "year": 2025,
+    "kind": "journal",
+    "venue": "Nature Communications 16, 6907",
+    "authors": "Yichong Wang†, <strong>Junlang Liu†</strong>, Michael M. Peters, Ryoma Ishii, Dianzhuo Wang, Sourav Chowdhury, Kevin Kit Parker &amp; Eugene I. Shakhnovich",
+    "summary": "An entropy-based account of salt-induced protein conformational changes, connecting the water network to protein material regeneration.",
+    "url": "https://doi.org/10.1038/s41467-025-61959-9",
+    "code": null
+  },
+  {
+    "id": "pub-metabolons",
+    "title": "Enzymatic metabolons dramatically enhance metabolic fluxes of low-efficiency biochemical reactions",
+    "year": 2023,
+    "kind": "journal",
+    "venue": "Biophysical Journal 122, 4555–4566",
+    "authors": "Srivastav Ranganathan†, <strong>Junlang Liu†</strong> &amp; Eugene I. Shakhnovich",
+    "summary": "Reaction–diffusion theory and coarse-grained simulations explain why spatial clustering particularly benefits reaction-limited enzymes.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37915170/",
+    "code": null
+  },
+  {
+    "id": "pub-condensates",
+    "title": "Different states and the associated fates of biomolecular condensates",
+    "year": 2022,
+    "kind": "journal",
+    "venue": "Essays in Biochemistry 66, 849–862",
+    "authors": "Srivastav Ranganathan†, <strong>Junlang Liu†</strong> &amp; Eugene I. Shakhnovich",
+    "summary": "How biomolecular condensates form, change material states, and move between functional and pathological behavior.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36350032/",
+    "code": null
+  }
+]

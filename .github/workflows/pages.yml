@@ -1,0 +1,43 @@
+name: Build Academic Pages website
+on:
+  pull_request:
+  push:
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build original Academic Pages template
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Check public output
+        run: |
+          test -f _site/index.html
+          test -f _site/assets/css/main.css
+          test -f _site/publications/index.html
+          test -z "$(find _site -iname '*.pdf' -o -iname '*.docx')"
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
