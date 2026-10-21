@@ -11,14 +11,14 @@ redirect_from:
 Education
 ======
 
-**Harvard University** — Ph.D. in Chemistry, August 2026  
-Advisor: Eugene I. Shakhnovich  
-Thesis: *Towards Principles of Protein Dynamics across Folding, Interactions, and Cellular Organization*  
+**Harvard University** — Ph.D. in Chemistry, August 2026<br>
+Advisor: Eugene I. Shakhnovich<br>
+Thesis: *Towards Principles of Protein Dynamics across Folding, Interactions, and Cellular Organization*<br>
 Research fields: Biophysics, protein dynamics, and statistical mechanics.
 
 **Harvard University** — M.A. in Chemistry, June 2023.
 
-**Fudan University** — B.S. in Chemistry, May 2020.  
+**Fudan University** — B.S. in Chemistry, May 2020.<br>
 Chun-Tsung Fellow.
 
 Additional training
@@ -29,7 +29,7 @@ Additional training
 Research experience
 ======
 
-**Graduate researcher, Shakhnovich Biophysics Lab, Harvard University** — 2021–2026  
+**Graduate researcher, Shakhnovich Biophysics Lab, Harvard University** — 2021–2026<br>
 Protein dynamics and chaperone recognition; entropy-driven protein conformational changes; enzyme clustering and metabolic flux; the physics of biomolecular condensates.
 
 **Undergraduate research assistant, Hong Lab, Stanford University** — 2019.
